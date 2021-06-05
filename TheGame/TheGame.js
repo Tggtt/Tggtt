@@ -3205,7 +3205,7 @@ ApplicationMain.main = function() {
 ApplicationMain.create = function(config) {
 	var app = new openfl_display_Application();
 	ManifestResources.init(config);
-	app.meta.h["build"] = "224";
+	app.meta.h["build"] = "226";
 	app.meta.h["company"] = "Tggtt";
 	app.meta.h["file"] = "TheGame";
 	app.meta.h["name"] = "The Game";
@@ -3777,7 +3777,7 @@ ManifestResources.init = function(config) {
 		ManifestResources.rootPath = "./";
 	}
 	var bundle;
-	var data = "{\"name\":null,\"assets\":\"aoy4:pathy18:assets%2Fajmb2.pngy4:sizei87460y4:typey5:IMAGEy2:idR1y7:preloadtgoR0y17:assets%2Fajbm.pngR2i45057R3R4R5R7R6tgoR0y18:assets%2Fajmb1.pngR2i6109R3R4R5R8R6tgoR0y16:assets%2Faj1.pngR2i19593R3R4R5R9R6tgoR0y16:assets%2Faj2.pngR2i27796R3R4R5R10R6tgoR0y16:assets%2Faj3.pngR2i22128R3R4R5R11R6tgoR0y16:assets%2Faj4.pngR2i23823R3R4R5R12R6tgoR0y16:assets%2Faj5.pngR2i17153R3R4R5R13R6tgoR0y16:assets%2Faj7.pngR2i20928R3R4R5R14R6tgoR0y16:assets%2Faj6.pngR2i21106R3R4R5R15R6tgoR0y17:assets%2Faj4r.pngR2i23913R3R4R5R16R6tgoR0y17:assets%2Faj7r.pngR2i20780R3R4R5R17R6tgoR0y17:assets%2Faj6r.pngR2i21359R3R4R5R18R6tgoR0y17:assets%2Faj5r.pngR2i17270R3R4R5R19R6tgoR0y17:assets%2Faj3r.pngR2i15391R3R4R5R20R6tgoR0y17:assets%2Faj1r.pngR2i19376R3R4R5R21R6tgoR0y17:assets%2Faj2r.pngR2i27788R3R4R5R22R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
+	var data = "{\"name\":null,\"assets\":\"aoy4:pathy18:assets%2Fajmb2.pngy4:sizei87467y4:typey5:IMAGEy2:idR1y7:preloadtgoR0y17:assets%2Fajbm.pngR2i45057R3R4R5R7R6tgoR0y18:assets%2Fajmb1.pngR2i6109R3R4R5R8R6tgoR0y17:assets%2Faj7r.pngR2i20780R3R4R5R9R6tgoR0y16:assets%2Faj7.pngR2i20928R3R4R5R10R6tgoR0y17:assets%2Faj6r.pngR2i21359R3R4R5R11R6tgoR0y16:assets%2Faj6.pngR2i21106R3R4R5R12R6tgoR0y17:assets%2Faj5r.pngR2i17270R3R4R5R13R6tgoR0y16:assets%2Faj5.pngR2i17153R3R4R5R14R6tgoR0y17:assets%2Faj4r.pngR2i23913R3R4R5R15R6tgoR0y16:assets%2Faj4.pngR2i23823R3R4R5R16R6tgoR0y17:assets%2Faj3r.pngR2i21488R3R4R5R17R6tgoR0y16:assets%2Faj3.pngR2i22128R3R4R5R18R6tgoR0y17:assets%2Faj2r.pngR2i27788R3R4R5R19R6tgoR0y16:assets%2Faj2.pngR2i27796R3R4R5R20R6tgoR0y17:assets%2Faj1r.pngR2i19376R3R4R5R21R6tgoR0y16:assets%2Faj1.pngR2i19593R3R4R5R22R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
 	var manifest = lime_utils_AssetManifest.parse(data,ManifestResources.rootPath);
 	var library = lime_utils_AssetLibrary.fromManifest(manifest);
 	lime_utils_Assets.registerLibrary("default",library);
@@ -23114,7 +23114,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 614954;
+	this.version = 278337;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -74082,7 +74082,7 @@ openfl_display_DisplayObject.__tempStack = new lime_utils_ObjectPool(function() 
 },function(stack) {
 	stack.set_length(0);
 });
-Main.warningText = ["This game is known to cause extreme addiction.","We are not responsible if it causes aggressivity, rage, insomnia,"," loss of friends or lack of interest on other activities.","Do not ask for help if someone you know"," becomes a zombie due to this game."," ","Please proceed with caution!","You have been warned!"];
+Main.warningText = ["This is not just a game, but a special class of game"," that migrates from playground to playground.","This game is known to cause extreme addiction.","We are not responsible if after playing you can't eat, sleep","  or go to the bathroom without thinking of the game.","Do not ask for help if someone you know becomes a game zombie."," ","Please proceed with caution!","You have been warned!"];
 Main.tileWidth = 147;
 Main.tileHeight = 198;
 haxe_Serializer.USE_CACHE = false;
