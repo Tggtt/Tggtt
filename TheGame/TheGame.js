@@ -3205,7 +3205,7 @@ ApplicationMain.main = function() {
 ApplicationMain.create = function(config) {
 	var app = new openfl_display_Application();
 	ManifestResources.init(config);
-	app.meta.h["build"] = "250";
+	app.meta.h["build"] = "254";
 	app.meta.h["company"] = "Tggtt";
 	app.meta.h["file"] = "TheGame";
 	app.meta.h["name"] = "The Game";
@@ -3293,7 +3293,8 @@ var Main = function() {
 	buttonOver.set_backgroundColor(14737632);
 	buttonOver.set_border(true);
 	var buttonDown = new openfl_text_TextField();
-	buttonDown.set_htmlText("<font size=\"30\">&nbsp;&nbsp;&nbsp;" + "You will play! You will play! You will play!" + "&nbsp;&nbsp;&nbsp;</font>");
+	buttonDown.set_autoSize(0);
+	buttonDown.set_htmlText("<font size=\"30\">" + "You will play! You will play! You will play!" + "</font>");
 	buttonDown.set_background(true);
 	buttonDown.set_backgroundColor(5263440);
 	buttonDown.set_border(true);
@@ -3363,7 +3364,8 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		buttonOver.set_backgroundColor(14737632);
 		buttonOver.set_border(true);
 		var buttonDown = new openfl_text_TextField();
-		buttonDown.set_htmlText("<font size=\"30\">&nbsp;&nbsp;&nbsp;" + "You will play! You will play! You will play!" + "&nbsp;&nbsp;&nbsp;</font>");
+		buttonDown.set_autoSize(0);
+		buttonDown.set_htmlText("<font size=\"30\">" + "You will play! You will play! You will play!" + "</font>");
 		buttonDown.set_background(true);
 		buttonDown.set_backgroundColor(5263440);
 		buttonDown.set_border(true);
@@ -3444,7 +3446,8 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		buttonOver.set_backgroundColor(14737632);
 		buttonOver.set_border(true);
 		var buttonDown = new openfl_text_TextField();
-		buttonDown.set_htmlText("<font size=\"30\">&nbsp;&nbsp;&nbsp;" + downText + "&nbsp;&nbsp;&nbsp;</font>");
+		buttonDown.set_autoSize(0);
+		buttonDown.set_htmlText("<font size=\"30\">" + downText + "</font>");
 		buttonDown.set_background(true);
 		buttonDown.set_backgroundColor(5263440);
 		buttonDown.set_border(true);
@@ -23117,7 +23120,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 283881;
+	this.version = 440906;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
