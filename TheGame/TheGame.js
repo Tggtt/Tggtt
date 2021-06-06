@@ -3205,7 +3205,7 @@ ApplicationMain.main = function() {
 ApplicationMain.create = function(config) {
 	var app = new openfl_display_Application();
 	ManifestResources.init(config);
-	app.meta.h["build"] = "226";
+	app.meta.h["build"] = "250";
 	app.meta.h["company"] = "Tggtt";
 	app.meta.h["file"] = "TheGame";
 	app.meta.h["name"] = "The Game";
@@ -3293,11 +3293,12 @@ var Main = function() {
 	buttonOver.set_backgroundColor(14737632);
 	buttonOver.set_border(true);
 	var buttonDown = new openfl_text_TextField();
-	buttonDown.set_autoSize(1);
-	buttonDown.set_htmlText(text);
+	buttonDown.set_htmlText("<font size=\"30\">&nbsp;&nbsp;&nbsp;" + "You will play! You will play! You will play!" + "&nbsp;&nbsp;&nbsp;</font>");
 	buttonDown.set_background(true);
 	buttonDown.set_backgroundColor(5263440);
 	buttonDown.set_border(true);
+	buttonDown.set_width(buttonUp.get_width());
+	buttonDown.set_height(buttonUp.get_height());
 	var buttonHit = new openfl_text_TextField();
 	buttonHit.set_autoSize(1);
 	buttonHit.set_htmlText(text);
@@ -3362,11 +3363,12 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		buttonOver.set_backgroundColor(14737632);
 		buttonOver.set_border(true);
 		var buttonDown = new openfl_text_TextField();
-		buttonDown.set_autoSize(1);
-		buttonDown.set_htmlText(text);
+		buttonDown.set_htmlText("<font size=\"30\">&nbsp;&nbsp;&nbsp;" + "You will play! You will play! You will play!" + "&nbsp;&nbsp;&nbsp;</font>");
 		buttonDown.set_background(true);
 		buttonDown.set_backgroundColor(5263440);
 		buttonDown.set_border(true);
+		buttonDown.set_width(buttonUp.get_width());
+		buttonDown.set_height(buttonUp.get_height());
 		var buttonHit = new openfl_text_TextField();
 		buttonHit.set_autoSize(1);
 		buttonHit.set_htmlText(text);
@@ -3427,7 +3429,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		}
 		this.warningTextField = null;
 	}
-	,createButton: function(buttonText) {
+	,createButton: function(buttonText,downText) {
 		var text = "<font size=\"32\">" + buttonText + "</font>";
 		var buttonUp = new openfl_text_TextField();
 		buttonUp.set_autoSize(1);
@@ -3442,11 +3444,12 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		buttonOver.set_backgroundColor(14737632);
 		buttonOver.set_border(true);
 		var buttonDown = new openfl_text_TextField();
-		buttonDown.set_autoSize(1);
-		buttonDown.set_htmlText(text);
+		buttonDown.set_htmlText("<font size=\"30\">&nbsp;&nbsp;&nbsp;" + downText + "&nbsp;&nbsp;&nbsp;</font>");
 		buttonDown.set_background(true);
 		buttonDown.set_backgroundColor(5263440);
 		buttonDown.set_border(true);
+		buttonDown.set_width(buttonUp.get_width());
+		buttonDown.set_height(buttonUp.get_height());
 		var buttonHit = new openfl_text_TextField();
 		buttonHit.set_autoSize(1);
 		buttonHit.set_htmlText(text);
@@ -3478,7 +3481,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		while(_g < 8) {
 			var i = _g++;
 			this.tile = new AJTile(i,Math.random() >= 0.50);
-			this.tile.set_x(50 + i * 60);
+			this.tile.set_x((i + 1) * 60 - 10);
 			this.tile.set_y(this.stage.stageHeight - this.tile.get_height() + 20);
 			this.tile.set_buttonMode(true);
 			this.addChild(this.tile);
@@ -3486,7 +3489,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 			this.tile.addEventListener("mouseWheel",$bind(this,this.Logo_onMouseAlt));
 			this.tile.addEventListener("rightClick",$bind(this,this.Logo_onMouseAlt));
 			this.tile = new AJTile(i,Math.random() >= 0.50);
-			this.tile.set_x(50 + (i + 1) * 60);
+			this.tile.set_x((i + 2) * 60 - 10);
 			this.tile.set_y(this.stage.stageHeight - this.tile.get_height() + 20);
 			this.tile.set_buttonMode(true);
 			this.addChild(this.tile);
@@ -3532,7 +3535,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		while(_g < 8) {
 			var i = _g++;
 			this.tile = new AJTile(i,Math.random() >= 0.50);
-			this.tile.set_x(50 + i * 60);
+			this.tile.set_x((i + 1) * 60 - 10);
 			this.tile.set_y(this.stage.stageHeight - this.tile.get_height() + 20);
 			this.tile.set_buttonMode(true);
 			this.addChild(this.tile);
@@ -3540,7 +3543,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 			this.tile.addEventListener("mouseWheel",$bind(this,this.Logo_onMouseAlt));
 			this.tile.addEventListener("rightClick",$bind(this,this.Logo_onMouseAlt));
 			this.tile = new AJTile(i,Math.random() >= 0.50);
-			this.tile.set_x(50 + (i + 1) * 60);
+			this.tile.set_x((i + 2) * 60 - 10);
 			this.tile.set_y(this.stage.stageHeight - this.tile.get_height() + 20);
 			this.tile.set_buttonMode(true);
 			this.addChild(this.tile);
@@ -3777,7 +3780,7 @@ ManifestResources.init = function(config) {
 		ManifestResources.rootPath = "./";
 	}
 	var bundle;
-	var data = "{\"name\":null,\"assets\":\"aoy4:pathy18:assets%2Fajmb2.pngy4:sizei87467y4:typey5:IMAGEy2:idR1y7:preloadtgoR0y17:assets%2Fajbm.pngR2i45057R3R4R5R7R6tgoR0y18:assets%2Fajmb1.pngR2i6109R3R4R5R8R6tgoR0y17:assets%2Faj7r.pngR2i20780R3R4R5R9R6tgoR0y16:assets%2Faj7.pngR2i20928R3R4R5R10R6tgoR0y17:assets%2Faj6r.pngR2i21359R3R4R5R11R6tgoR0y16:assets%2Faj6.pngR2i21106R3R4R5R12R6tgoR0y17:assets%2Faj5r.pngR2i17270R3R4R5R13R6tgoR0y16:assets%2Faj5.pngR2i17153R3R4R5R14R6tgoR0y17:assets%2Faj4r.pngR2i23913R3R4R5R15R6tgoR0y16:assets%2Faj4.pngR2i23823R3R4R5R16R6tgoR0y17:assets%2Faj3r.pngR2i21488R3R4R5R17R6tgoR0y16:assets%2Faj3.pngR2i22128R3R4R5R18R6tgoR0y17:assets%2Faj2r.pngR2i27788R3R4R5R19R6tgoR0y16:assets%2Faj2.pngR2i27796R3R4R5R20R6tgoR0y17:assets%2Faj1r.pngR2i19376R3R4R5R21R6tgoR0y16:assets%2Faj1.pngR2i19593R3R4R5R22R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
+	var data = "{\"name\":null,\"assets\":\"aoy4:pathy18:assets%2Fajmb2.pngy4:sizei51832y4:typey5:IMAGEy2:idR1y7:preloadtgoR0y18:assets%2Fajmb1.pngR2i5583R3R4R5R7R6tgoR0y17:assets%2Fajbm.pngR2i39848R3R4R5R8R6tgoR0y17:assets%2Faj7r.pngR2i17965R3R4R5R9R6tgoR0y16:assets%2Faj7.pngR2i17996R3R4R5R10R6tgoR0y17:assets%2Faj6r.pngR2i17989R3R4R5R11R6tgoR0y16:assets%2Faj6.pngR2i17751R3R4R5R12R6tgoR0y17:assets%2Faj5r.pngR2i15612R3R4R5R13R6tgoR0y16:assets%2Faj5.pngR2i15535R3R4R5R14R6tgoR0y17:assets%2Faj4r.pngR2i20985R3R4R5R15R6tgoR0y16:assets%2Faj4.pngR2i20952R3R4R5R16R6tgoR0y17:assets%2Faj3r.pngR2i18370R3R4R5R17R6tgoR0y16:assets%2Faj3.pngR2i18832R3R4R5R18R6tgoR0y17:assets%2Faj2r.pngR2i22942R3R4R5R19R6tgoR0y16:assets%2Faj2.pngR2i22913R3R4R5R20R6tgoR0y17:assets%2Faj1r.pngR2i17009R3R4R5R21R6tgoR0y16:assets%2Faj1.pngR2i17413R3R4R5R22R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
 	var manifest = lime_utils_AssetManifest.parse(data,ManifestResources.rootPath);
 	var library = lime_utils_AssetLibrary.fromManifest(manifest);
 	lime_utils_Assets.registerLibrary("default",library);
@@ -23114,7 +23117,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 278337;
+	this.version = 283881;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
